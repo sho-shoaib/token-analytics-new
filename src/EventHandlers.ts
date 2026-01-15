@@ -21,6 +21,7 @@ Diesel.MintEvent.handler(async ({ event, context }) => {
     asset_1_in: event.params.asset_1_in,
     liquidity: event.params.liquidity.amount,
     hash: event.transaction.id,
+    time: event.block.time,
   };
 
   context.Diesel_MintEvent.set(entity);
@@ -35,6 +36,7 @@ Diesel.BurnEvent.handler(async ({ event, context }) => {
     asset_1_out: event.params.asset_1_out,
     liquidity: event.params.liquidity.amount,
     hash: event.transaction.id,
+    time: event.block.time,
   };
 
   context.Diesel_BurnEvent.set(entity);
@@ -50,6 +52,7 @@ Diesel.SwapEvent.handler(async ({ event, context }) => {
     asset_0_in: event.params.asset_0_in,
     asset_1_in: event.params.asset_1_in,
     hash: event.transaction.id,
+    time: event.block.time,
   };
 
   context.Diesel_SwapEvent.set(entity);
@@ -64,6 +67,7 @@ Mira.BurnEvent.handler(async ({ event, context }) => {
     asset_1_out: event.params.asset_1_out,
     liquidity: event.params.liquidity.amount,
     hash: event.transaction.id,
+    time: event.block.time,
   };
 
   context.Mira_BurnEvent.set(entity);
@@ -78,6 +82,7 @@ Mira.MintEvent.handler(async ({ event, context }) => {
     asset_1_in: event.params.asset_1_in,
     liquidity: event.params.liquidity.amount,
     hash: event.transaction.id,
+    time: event.block.time,
   };
 
   context.Mira_MintEvent.set(entity);
@@ -93,6 +98,7 @@ Mira.SwapEvent.handler(async ({ event, context }) => {
     asset_0_in: event.params.asset_0_in,
     asset_1_in: event.params.asset_1_in,
     hash: event.transaction.id,
+    time: event.block.time,
   };
 
   context.Mira_SwapEvent.set(entity);

@@ -6,6 +6,7 @@ type Diesel_MintEvent {
   asset_1_in: BigInt!
   liquidity: BigInt!
   hash: String!
+  time: Int!
 }
 
 type Diesel_BurnEvent {
@@ -16,6 +17,7 @@ type Diesel_BurnEvent {
   asset_1_out: BigInt!
   liquidity: BigInt!
   hash: String!
+  time: Int!
 }
 
 type Diesel_SwapEvent {
@@ -27,6 +29,7 @@ type Diesel_SwapEvent {
   asset_0_in: BigInt!
   asset_1_in: BigInt!
   hash: String!
+  time: Int!
 }
 
 type Mira_BurnEvent {
@@ -37,6 +40,7 @@ type Mira_BurnEvent {
   asset_1_out: BigInt!
   liquidity: BigInt!
   hash: String!
+  time: Int!
 }
 
 type Mira_MintEvent {
@@ -47,6 +51,7 @@ type Mira_MintEvent {
   asset_1_in: BigInt!
   liquidity: BigInt!
   hash: String!
+  time: Int!
 }
 
 type Mira_SwapEvent {
@@ -58,5 +63,6 @@ type Mira_SwapEvent {
   asset_0_in: BigInt!
   asset_1_in: BigInt!
   hash: String!
+  time: Int!
 }
 
