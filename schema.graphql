@@ -1,0 +1,62 @@
+type Diesel_MintEvent {
+  id: ID!
+  recipient: String!
+  pool_id: String!
+  asset_0_in: BigInt!
+  asset_1_in: BigInt!
+  liquidity: BigInt!
+  hash: String!
+}
+
+type Diesel_BurnEvent {
+  id: ID!
+  recipient: String!
+  pool_id: String!
+  asset_0_out: BigInt!
+  asset_1_out: BigInt!
+  liquidity: BigInt!
+  hash: String!
+}
+
+type Diesel_SwapEvent {
+  id: ID!
+  recipient: String!
+  pool_id: String!
+  asset_0_out: BigInt!
+  asset_1_out: BigInt!
+  asset_0_in: BigInt!
+  asset_1_in: BigInt!
+  hash: String!
+}
+
+type Mira_BurnEvent {
+  id: ID!
+  recipient: String!
+  pool_id: String!
+  asset_0_out: BigInt!
+  asset_1_out: BigInt!
+  liquidity: BigInt!
+  hash: String!
+}
+
+type Mira_MintEvent {
+  id: ID!
+  recipient: String!
+  pool_id: String!
+  asset_0_in: BigInt!
+  asset_1_in: BigInt!
+  liquidity: BigInt!
+  hash: String!
+}
+
+type Mira_SwapEvent {
+  id: ID!
+  recipient: String!
+  pool_id: String!
+  asset_0_out: BigInt!
+  asset_1_out: BigInt!
+  asset_0_in: BigInt!
+  asset_1_in: BigInt!
+  hash: String!
+}
+

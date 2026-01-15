@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=./node_modules/envio/fuel.schema.json
+name: envio-indexer
+ecosystem: fuel
+networks:
+- id: 9889
+  start_block: 0
+  contracts:
+  - name: mira
+    address:
+    - 0x2e40f2b244b98ed6b8204b3de0156c6961f98525c8162f80162fcf53eebd90e7
+    abi_file_path: abis/mira-abi.json
+    handler: src/EventHandlers.ts
+    events:
+    - name: BurnEvent
+      logId: '3903049024573527731'
+    - name: MintEvent
+      logId: '12547144180067087194'
+    - name: SwapEvent
+      logId: '7938487056892321597'
+  - name: diesel
+    address:
+    - 0x7c293b054938bedca41354203be4c08aec2c3466412cac803f4ad62abf22e476
+    abi_file_path: abis/diesel-abi.json
+    handler: src/EventHandlers.ts
+    events:
+    - name: MintEvent
+      logId: '12547144180067087194'
+    - name: BurnEvent
+      logId: '3903049024573527731'
+    - name: SwapEvent
+      logId: '7938487056892321597'
+preload_handlers: true
